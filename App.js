@@ -22,6 +22,7 @@ class App extends React.Component {
     });
   };
   render() {
+    const style = this.state.shopingCart === 0 ? { opacity: 0.3 } : {};
     return (
       <>
         <button
@@ -30,7 +31,7 @@ class App extends React.Component {
         >
           -
         </button>
-        <span> {this.state.shopingCart} </span>
+        <span style={style}> {this.state.shopingCart} </span>
         <button
           disabled={
             this.state.shopingCart === this.state.availableProducts
